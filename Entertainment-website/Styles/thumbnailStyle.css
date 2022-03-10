@@ -1,0 +1,83 @@
+.userPref{
+	width: 100%;
+	background-color: #f1f1f1;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+select{
+	padding: 5px;
+	border-radius: 10px;
+	margin-right: 20px;
+	font-size: 18px;
+}
+
+h1{
+	text-align: center;
+	font-size: 5em;
+}
+
+.thumbnailBar{
+	margin-left: 290px;
+}
+
+.thumbnail{
+	float: left;
+	width: 12%;
+	margin: 10px; 
+}
+
+.thumbnailBar img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+.displayLargeImage{
+	clear: left;
+	border:1px solid black;
+	border-radius: 10px;
+	padding: 20px 10px 60px 10px;
+	height: 1000px;
+}
+
+#largeImageContainer{
+	float: left;
+	width: 50%;
+	margin-right: 30px;
+}
+
+#heading{
+	font-size: 35px;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.information{
+	text-align: justify;
+	padding-right: 40px;
+	padding-left: 40px;
+}
+
+#backToTop{
+	margin: 10px 0 0 20px;
+}
+
+.pageEditorLink{
+	clear: left;
+	background-color: #f1f1f1;
+	padding: 10px 50px 10px 50px;
+	border-radius: 10px;
+	margin: 50px 0 10px 0;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	color: red;
+}
+

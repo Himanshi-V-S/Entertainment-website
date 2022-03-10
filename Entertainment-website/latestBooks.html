@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Latest Books</title>
+	<meta charset="UTF-8">
+	
+	<!--CSS stylesheets-->
+	<link rel = "stylesheet" href = "Styles/thumbnailStyle.css">
+	<link rel = "stylesheet" href = "Styles/navStyle.css">
+	<link rel= "StyleSheet" href= "Styles/styleSheet.css">
+</head>
+
+<body class = "mainBody">
+	<div class= "headingStrip">
+		<div class="navBarFont">
+			
+			<div class="divertimento">
+				Divertimento
+			</div>
+			
+			<div id="navBar" class="menuPopUp">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNavBar()"> &times; </a>
+				<div class="menuPopUp-content">	
+					<a href="https://w1833519.users.ecs.westminster.ac.uk/mainPage.html"> Home </a>
+					<a href="https://w1830254.users.ecs.westminster.ac.uk/latestReleases.html"> Latest Releases </a>
+					<a href="https://w1833588.users.ecs.westminster.ac.uk/buyproducts.html"> Shop </a>
+					<a href="https://w1833518.users.ecs.westminster.ac.uk/index1.html"> Quiz </a>
+					<a href="https://w1833519.users.ecs.westminster.ac.uk/queryForm.html"> Contact Us </a>
+					<a href="https://w1833518.users.ecs.westminster.ac.uk/about.html"> About Us </a>
+				</div>
+			</div>
+			
+			<span class= "menuIcon" onclick= "openNavBar()"> &#9776; </span>
+		
+		</div>
+	</div>
+
+	<form>
+		
+		<!--A bar for pulldown menus-->
+		<div class = "userPref">
+		
+			<!--Pull down menu to change page background color-->
+			<label for = "backgroundColors">Pick a background color</label>
+			<select name = "backgroundColors" id = "backgroundColors" onchange = "changeBgColor(this.form)">
+				<option value = "pink">Pale Pink</option>
+				<option value = "green">Green</option>
+				<option value = "grey">Grey</option>
+			</select>
+			
+			<!--Pull down menu to change page text color-->
+			<label for = "textColors">Pick a font color</label>
+			<select name = "textColors" id = "textColors" onchange = "changeTxtColor(this.form)">
+				<option value = "black">Black</option>
+				<option value = "darkBlue">Dark Blue</option>
+				<option value = "green">Dark Green</option>
+			</select>
+		
+		</div>
+	</form>
+
+	<div id = "mainHeading">
+		<h1>Latest Books</h1>
+	</div>
+
+	<!--Displaying Five thumbnail images-->
+	<div class="thumbnailBar">
+		
+		<div id = "AftershocksBook" class = "thumbnail">
+			<img src = "BookImages/AftershocksBook.jpg" alt = "Aftershocks book image" style="width:100%" >
+		</div>
+		
+		<div id = "WhereaboutsBook" class = "thumbnail">
+			<img src = "BookImages/WhereaboutsBook.jpg" alt = "Whereabouts book image" style="width:100%">
+		</div>
+		
+		<div id = "TheLastThingBook" class = "thumbnail">
+			<img src = "BookImages/TheLastThingBookmini.jpg" alt = "The Last Thing He Told Me book image" style="width:100%">
+		</div>
+		
+		<div id = "LetMeTellBook" class = "thumbnail">
+			<img src = "BookImages/LetMeTellBook.jpg" alt = "Let Me Tell You What I Mean book image" style="width:100%">
+		</div>
+		
+		<div id = "TheFinalRevivalBook" class = "thumbnail">
+			<img src = "BookImages/TheFinalRevivalBook.jpg" alt = "The Final Revival book image" style="width:100%">
+		</div>
+
+	</div>
+
+	<!--Displaying large image and description of selected thumbnail image-->
+	<div class="displayLargeImage">
+		
+		<!--By default the first thumbnail image and description is displayed-->
+		<div id = "largeImageContainer">
+			<img src = "BookImages/AftershocksBook.jpg" alt = "Aftershocks book image" style="width:100%" id = "largeImage">
+		</div>
+		
+		<div id= "description">
+			<div id = "heading">Aftershocks</div>
+			<div class = "information">
+				<b>Author:</b> <span id = "author"> Nadia Owusu</span> <br><br>
+				<h3>Storyline</h3>
+				<span id = "storyline"> 
+				Nadia Owusu’s debut memoir, Aftershocks, has those residual tremors
+				that follow an earthquake as its central metaphor, and the author
+				had plenty of life-shaking events around which to orient her narrative.
+				The daughter of an erudite Ghanaian U.N. official and an emotionally
+				distant Armenian mother, Owusu grew up straddling cultures and following
+				her impressive father. But the uneasiness in her life derived not from
+				her fluid, third-culture upbringing but from the death of her father
+				when Owusu was still a child; the abandonment of her mother; and a
+				strained relationship with the stepmother who carried out the difficult
+				process of raising her. There is something fairy tale–like about Owusu’s
+				story, an orphan-like existence of struggle and survival, but there
+				is no fairy godmother who rescues this heroine—just a growing sense
+				of self-awareness to orient her in a troubling world. —Chloe Schama
+				</span><br><br>
+			</div>
+		</div>
+	</div>
+
+	<!--A link to move to the top of the page-->
+	<div id = "backToTop">
+		<a href="#mainHeading"><img src="arrow.png" alt="upward arrow" width= "40" height = "40">&nbsp;&nbsp;Back To The Top</a>
+	</div>
+
+	<hr>
+
+	<!--Link to page editor page-->
+	<div class = "pageEditorLink">
+		<a href = "pageEditor.html" >See who designed this page</a>
+	</div>
+	
+	<!--Common javascript: Navigation bar functions, pull down menu functions and individual book displaying functions-->
+	<script src = "thumbnail.js"></script>
+
+	<!--Unique avascript: Functions to select books-->
+	<script>
+		document.getElementById("AftershocksBook").addEventListener("mouseover", displayAftershocksBook);
+		document.getElementById("WhereaboutsBook").addEventListener("mouseover", displayWhereaboutsBook);
+		document.getElementById("TheLastThingBook").addEventListener("mouseover", displayTheLastThingBook);
+		document.getElementById("LetMeTellBook").addEventListener("mouseover", displayLetMeTellBook);
+		document.getElementById("TheFinalRevivalBook").addEventListener("mouseover", displayTheFinalRevivalBook);
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Trending Video Games</title>
+	<meta charset="UTF-8">
+	
+	<!--CSS stylesheets-->
+	<link rel = "stylesheet" href = "Styles/thumbnailStyle.css">
+	<link rel = "stylesheet" href = "Styles/navStyle.css">
+	<link rel= "StyleSheet" href= "Styles/styleSheet.css">
+</head>
+
+<body class= "mainBody">
+	<div class= "headingStrip">
+		<div class="navBarFont">
+			
+			<div class="divertimento">
+				Divertimento
+			</div>
+			
+			<div id="navBar" class="menuPopUp">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNavBar()"> &times; </a>
+				<div class="menuPopUp-content">	
+					<a href="https://w1833519.users.ecs.westminster.ac.uk/mainPage.html"> Home </a>
+					<a href="https://w1830254.users.ecs.westminster.ac.uk/latestReleases.html"> Latest Releases </a>
+					<a href="https://w1833588.users.ecs.westminster.ac.uk/buyproducts.html"> Shop </a>
+					<a href="https://w1833518.users.ecs.westminster.ac.uk/index1.html"> Quiz </a>
+					<a href="https://w1833519.users.ecs.westminster.ac.uk/queryForm.html"> Contact Us </a>
+					<a href="https://w1833518.users.ecs.westminster.ac.uk/about.html"> About Us </a>
+				</div>
+			</div>
+			
+			<span class="menuIcon" onclick= "openNavBar()"> &#9776; </span>
+		
+		</div>
+	</div>
+
+	<form>
+		<!--A bar for pulldown menus-->
+		<div class = "userPref">
+		
+			<!--Pull down menu to change page background color-->
+			<label for = "backgroundColors">Pick a background color</label>
+			<select name = "backgroundColors" id = "backgroundColors" onchange = "changeBgColor(this.form)">
+				<option value = "pink">Pale Pink</option>
+				<option value = "green">Green</option>
+				<option value = "grey">Grey</option>
+			</select>
+
+			<!--Pull down menu to change page text color-->
+			<label for = "textColors">Pick a font color</label>
+			<select name = "textColors" id = "textColors" onchange = "changeTxtColor(this.form)">
+				<option value = "black">Black</option>
+				<option value = "darkBlue">Dark Blue</option>
+				<option value = "green">Dark Green</option>
+			</select>
+		
+		</div>
+	</form>
+
+	<div id = "mainHeading">
+		<h1>Trending Video Games</h1>
+	</div>
+	
+	<!--Displaying Five thumbnail images-->
+	<div class="thumbnailBar">
+
+		<div id = "SekiroGame" class = "thumbnail">
+			<img src = "GameImages/SekiroGame.jpg" alt = "Sekiro: Shadows Die Twice video game poster" style="width:100%" >
+		</div>
+		
+		<div id = "CODBlackOpsGame" class = "thumbnail" onclick = "()">
+			<img src = "GameImages/CODBlackOpsGame.jpg" alt = "Call of Duty: Black Ops Cold War video game poster" style="width:100%">
+		</div>
+		
+		<div id = "ValorantGame" class = "thumbnail" onclick = "()">
+			<img src = "GameImages/ValorantGame.jpg" alt = "Valorant video game poster" style="width:100%">
+		</div>
+		
+		<div id = "PUBGGame" class = "thumbnail" onclick = "()">
+			<img src = "GameImages/PUBGGame.jpg" alt = "PlayerUnknown's Battlegrounds(PUBG) video game poster" style="width:100%">
+		</div>
+		
+		<div id = "FIFA21Game" class = "thumbnail" onclick = "()">
+			<img src = "GameImages/FIFA21Game.jpg" alt = "FIFA 21 video game poster" style="width:100%">
+		</div>
+
+	</div>
+
+	<!--Displaying large image and description of selected thumbnail image-->
+	<div class="displayLargeImage">
+		
+		<!--By default the first thumbnail image and description is displayed-->
+		<div id = "largeImageContainer">
+			<img src = "GameImages/SekiroGame.jpg" alt = "Sekiro: Shadows Die Twice video game poster" style="width:100%" id = "largeImage">
+		</div>
+		
+		<div id= "description">
+			<div id = "heading">Sekiro: Shadows Die Twice</div>
+			<div class = "information">
+				<b>Initial release date:</b> <span id = "releaseDate"> March 22, 2019 </span> <br><br>
+				<b>Mode:</b> <span id = "mode">Single-player video game</span> <br><br>
+				<b>Platforms:</b> <span id = "platforms"> PlayStation 4, Xbox One, Google Stadia, Microsoft Windows </span> <br><br>
+				<span id = "aboutGame"> 
+				Sekiro: Shadows Die Twice is an action-adventure video game developed by FromSoftware and published
+				by Activision. The game follows a shinobi known as Wolf as he attempts to take revenge on a samurai
+				clan who attacked him and kidnapped his lord. 
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<!--A link to move to the top of the page-->
+	<div id = "backToTop">
+		<a href="#mainHeading"><img src="arrow.png" alt="upward arrow" width= "40" height = "40">&nbsp;&nbsp;Back To The Top</a>
+	</div>
+
+	<hr>
+
+	<!--Link to page editor page-->
+	<div class = "pageEditorLink">
+		<a href = "pageEditor.html" >See who designed this page</a>
+	</div>
+
+	<!--Common javascript: Navigation bar functions, pull down menu functions and individual game displaying functions-->
+	<script src = "thumbnail.js"></script>
+
+	<!--Unique avascript: Functions to select games-->
+	<script>
+		document.getElementById("SekiroGame").addEventListener("mouseover", displaySekiroGame);
+		document.getElementById("CODBlackOpsGame").addEventListener("mouseover", displayCODBlackOpsGame);
+		document.getElementById("ValorantGame").addEventListener("mouseover", displayValorantGame);
+		document.getElementById("PUBGGame").addEventListener("mouseover", displayPUBGGame);
+		document.getElementById("FIFA21Game").addEventListener("mouseover", displayFIFA21Game);
+	</script>
+
+</body>
+
+</html>

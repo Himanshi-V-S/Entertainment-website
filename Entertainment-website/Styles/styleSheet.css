@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,400;1,700&display=swap');
+
+.mainBody {
+	font-family: "Roboto", sans-serif;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	background-color: #FFFCE6;
+}
+.headingStrip {
+	height: 150px;
+	background: #000000;
+	width: 100%;
+	position: relative;
+}
+.divertimento {
+	font-size: 50px;
+	color: #ffffff;
+	letter-spacing: 7px;
+	position: absolute;
+	top: 30%;
+	left:40%;
+}

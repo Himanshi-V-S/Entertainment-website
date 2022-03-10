@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Latest Releases</title>
+	<meta charset="UTF-8">
+	
+	<!--CSS stylesheets-->
+	<link rel = "stylesheet" href = "Styles/latestReleases.css">
+	<link rel = "stylesheet" href = "Styles/navStyle.css">
+	<link rel= "styleSheet" href= "Styles/styleSheet.css">
+</head>
+
+
+
+<body class = "mainBody">
+
+	<div class = "headingStrip">
+		<div class = "navBarFont">
+			
+			<div class = "divertimento">
+				Divertimento
+			</div>
+			
+			<div id = "navBar" class ="menuPopUp">
+				<a href = "javascript:void(0)" class = "closebtn" onclick = "closeNavBar()"> &times; </a>
+				<div class = "menuPopUp-content">	
+					<a href = "https://w1833519.users.ecs.westminster.ac.uk/mainPage.html"> Home </a>
+					<a href = "https://w1833588.users.ecs.westminster.ac.uk/buyproducts.html"> Shop </a>
+					<a href = "https://w1833518.users.ecs.westminster.ac.uk/index1.html"> Quiz </a>
+					<a href = "https://w1833519.users.ecs.westminster.ac.uk/queryForm.html"> Contact Us </a>
+					<a href = "https://w1833518.users.ecs.westminster.ac.uk/about.html"> About Us </a>
+				</div>
+			</div>
+			
+			<span class = "menuIcon" onclick = "openNavBar()"> &#9776; </span>
+		
+		</div>
+	</div>
+
+	<div>
+		<h1>Latest Releases</h1>
+	</div>
+
+	<div class="latestTypes">
+		
+		<!--Icon that leads to Latest books page when clicked-->
+		<div class = "type">
+			<h2>Books</h2>
+			<a href = "https://w1830254.users.ecs.westminster.ac.uk/latestBooks.html"><img src = "latestReleasesIcons/bookIcon.jpg" alt = "Books icon" style="width:100%"></a>
+		</div>
+		
+		<!--Icon that leads to Trending video games page when clicked-->
+		<div class = "type">
+			<h2>Video games</h2>
+			<a href = "https://w1830254.users.ecs.westminster.ac.uk/latestGames.html"><img src = "latestReleasesIcons/gameIcon.jpg" alt = "Video games icon" style="width:100%"></a>
+		</div>
+		
+		<!--Icon that leads to Latest movies page when clicked-->
+		<div class = "type">
+			<h2>Movies</h2>
+			<a href = "https://w1830254.users.ecs.westminster.ac.uk/latestMovies.html"><img src = "latestReleasesIcons/movieIcon.jpg" alt = "Movies icon" style="width:100%"></a>
+		</div>
+		
+	</div>
+
+	<!--Link to page editor page-->
+	<div class = "pageEditorLink">
+		<a href = "pageEditor.html">See who designed this page</a>
+	</div>
+
+	<script>
+		function openNavBar() {
+			document.getElementById("navBar").style.width = "100%";
+		}
+			
+		function closeNavBar() {
+			document.getElementById("navBar").style.width = "0%";
+		}
+	</script>
+
+</body>
+
+</html>

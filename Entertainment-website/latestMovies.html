@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Latest Movies</title>
+	<meta charset="UTF-8">
+	
+	<!--CSS stylesheets-->
+	<link rel = "stylesheet" href = "Styles/thumbnailStyle.css">
+	<link rel = "stylesheet" href = "Styles/navStyle.css">
+	<link rel= "StyleSheet" href= "Styles/styleSheet.css">
+</head>
+
+<body class = "mainBody">
+	<div class= "headingStrip">
+		<div class="navBarFont">
+			
+			<div class="divertimento">
+				Divertimento
+			</div>
+			
+			<div id="navBar" class="menuPopUp">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNavBar()"> &times; </a>
+				<div class="menuPopUp-content">	
+					<a href="https://w1833519.users.ecs.westminster.ac.uk/mainPage.html"> Home </a>
+					<a href="https://w1830254.users.ecs.westminster.ac.uk/latestReleases.html"> Latest Releases </a>
+					<a href="https://w1833588.users.ecs.westminster.ac.uk/buyproducts.html"> Shop </a>
+					<a href="https://w1833518.users.ecs.westminster.ac.uk/index1.html"> Quiz </a>
+					<a href="https://w1833519.users.ecs.westminster.ac.uk/queryForm.html"> Contact Us </a>
+					<a href="https://w1833518.users.ecs.westminster.ac.uk/about.html"> About Us </a>
+				</div>
+			</div>
+			
+			<span class="menuIcon" onclick= "openNavBar()"> &#9776; </span>
+		
+		</div>
+	</div>
+
+
+	<form>
+		<!--A bar for pulldown menus-->
+		<div class = "userPref">
+		
+			<!--Pull down menu to change page background color-->
+			<label for = "backgroundColors">Pick a background color</label>
+			<select name = "backgroundColors" id = "backgroundColors" onchange = "changeBgColor(this.form)">
+				<option value = "pink">Pale Pink</option>
+				<option value = "green">Green</option>
+				<option value = "grey">Grey</option>
+			</select>
+			
+			<!--Pull down menu to change page text color-->
+			<label for = "textColors">Pick a font color</label>
+			<select name = "textColors" id = "textColors" onchange = "changeTxtColor(this.form)">
+				<option value = "black">Black</option>
+				<option value = "darkBlue">Dark Blue</option>
+				<option value = "green">Dark Green</option>
+			</select>
+		</div>
+	</form>
+
+	<div id = "mainHeading">
+		<h1>Latest Movies</h1>
+	</div>
+	
+	<!--Displaying Five thumbnail images-->
+	<div class="thumbnailBar">
+
+		<div id = "TheTomorrowWarMovie" class = "thumbnail">
+			<img src = "MovieImages/TheTomorrowWarMovie.jpg" alt = "The Tomorrow War Movie poster" style="width:100%" >
+		</div>
+		
+		<div id = "NobodyMovie" class = "thumbnail">
+			<img src = "MovieImages/NobodyMovie.jpg" alt = "Nobody Movie poster" style="width:100%">
+		</div>
+		
+		<div id = "CruellaMovie" class = "thumbnail">
+			<img src = "MovieImages/CruellaMovie.jpg" alt = "Cruella Movie poster" style="width:100%">
+		</div> 
+		
+		<div id = "BossBabyMovie" class = "thumbnail">
+			<img src = "MovieImages/BossBabyMovie.jpg" alt = "Boss Baby: Family Business Movie poster" style="width:100%">
+		</div>
+		
+		<div id = "TheConjuring3Movie" class = "thumbnail">
+			<img src = "MovieImages/TheConjuring3Movie.jpg" alt = "The Conjuring 3 Movie poster" style="width:100%">
+		</div>
+
+	</div>
+	
+	<!--Displaying large image and description of selected thumbnail image-->
+	<div class="displayLargeImage">
+		
+		<!--By default the first thumbnail image and description is displayed-->
+		<div id = "largeImageContainer">
+			<img src = "MovieImages/TheTomorrowWarMovie.jpg" alt = "The Tomorrow War Movie poster" style="width:100%" id = "largeImage">
+		</div>
+		
+		<div id= "description">
+			<div id = "heading">The Tomorrow War</div>
+			<div class = "information">
+				<b>IMDb rating:</b> <span id = "imdbRate"> 6.7 </span> <br><br>
+				<b>Time duration:</b> <span id = "duration"> 2h 20min </span> <br><br>
+				<b>Director:</b> <span id = "director">Chris McKay </span> <br><br>
+				<b>Writer: </b> <span id = "writer"> Zach Dean </span> <br><br>
+				<b>Stars: </b> <span id = "stars" >Chris Pratt, Yvonne Strahovski, J.K. Simmons, Betty Gilpin </span><br>
+				<h3>Storyline</h3>
+				<span id = "storyline"> 
+				The world is stunned when a group of time travelers arrive from the year 2051
+				to deliver an urgent message: Thirty years in the future, mankind is losing a
+				global war against a deadly alien species. The only hope for survival is for
+				soldiers and civilians from the present to be transported to the future and
+				join the fight. Among those recruited is high school teacher and family man
+				Dan Forester (Chris Pratt). Determined to save the world for his young daughter,
+				Dan teams up with a brilliant scientist (Yvonne Strahovski) and his estranged
+				father (J.K. Simmons) in a desperate quest to rewrite the fate of the planet.
+				</span><br><br>
+				<b>Release Date:</b> <span id = "releaseDate">July 2, 2021 (United States) </span><br><br>
+				<b>Genres:</b> <span id = "genres">Action, Adventure, Drama, Sci-Fi, Thriller </span>
+			</div>
+		</div>
+	</div>
+
+	<!--A link to move to the top of the page-->
+	<div id = "backToTop">
+		<a href="#mainHeading"><img src="arrow.png" alt="upward arrow" width= "40" height = "40">&nbsp;&nbsp;Back To The Top</a>
+	</div>
+
+	<hr>
+
+	<!--Link to page editor page-->
+	<div class = "pageEditorLink">
+		<a href = "pageEditor.html" >See who designed this page</a>
+	</div>
+
+	<!--Common javascript: Navigation bar functions, pull down menu functions and individual movie displaying functions-->
+	<script src = "thumbnail.js"></script>
+
+	<!--Unique Javascript: Functions to select movies-->
+	<script>
+		document.getElementById("TheTomorrowWarMovie").addEventListener("mouseover", displayTheTomorrowWarMovie);
+		document.getElementById("NobodyMovie").addEventListener("mouseover", displayNobodyMovie);
+		document.getElementById("CruellaMovie").addEventListener("mouseover", displayCruellaMovie);
+		document.getElementById("BossBabyMovie").addEventListener("mouseover", displayBossBabyMovie);
+		document.getElementById("TheConjuring3Movie").addEventListener("mouseover", displayTheConjuring3Movie);
+	</script>
+
+</body>
+
+</html>

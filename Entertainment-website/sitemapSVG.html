@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Divertimento Sitemap</title>
+	<meta charset="UTF-8">
+
+	<style>
+		rect{
+			fill: #c9f0e1;	
+		}
+		
+		line{
+			stroke: black;
+			stroke-width: 2px;
+		}
+
+		text{
+			fill: black;
+			text-anchor: middle;
+			font-weight: bold;
+			font-size: 19px;
+		}
+		
+		#divertimentoSVG g:hover rect{
+			fill: #62e3b0;
+		}
+	</style>
+	
+	<link rel= "StyleSheet" href= "Styles/styleSheet.css">
+
+</head>
+
+<body class = "mainBody">
+    <svg id="divertimentoSVG" width="1350" height="550">
+	
+		<!--Sitemap representation of Home page-->
+        <g id="homePage">
+            <line x1="670" y1="220" x2="670" y2="190"></line>
+			<line x1="1150" y1="220" x2="175" y2="220"></line>
+            <rect x="595" y="140" rx="25" ry="25" width="150" height="50" />
+            <text x="665" y="170">Home</text>
+        </g>
+		
+		<!--Sitemap representation of Quiz page-->
+        <g id="quizPage">
+            <line x1="175" y1="220" x2="175" y2="250"></line>
+            <rect x="100" y="250" width="150" rx="25" ry="25" height="50" />
+            <text x="175" y="280">Quiz</text>
+        </g>
+
+		<!--Sitemap representation of Latest releases page-->
+        <g id="latestReleasesPage">
+            <line x1="370" y1="220" x2="370" y2="250"></line>
+            <rect x="295" y="250" width="150" rx="25" ry="25" height="50" />
+            <text x="370" y="280">Latest Releases</text>
+        </g>
+		
+		<!--Sitemap representation of Latest books page-->
+		<g id="latestBooksPage">
+            <line x1="320" y1="300" x2="320" y2="350"></line>
+            <line x1="320" y1="350" x2="330" y2="350"></line>
+            <rect x="330" y="325" width="150" rx="25" ry="25" height="50" />
+            <text x="405" y="355">Latest Books</text>
+        </g>
+		
+		<!--Sitemap representation of Trending video games page-->
+		<g id="trendingGamesPage">
+            <line x1="320" y1="350" x2="320" y2="420"></line>
+            <line x1="320" y1="420" x2="330" y2="420"></line>
+            <rect x="330" y="395" width="200" rx="25" ry="25" height="50" />
+            <text x="425" y="425">Trending video games</text>
+        </g>
+		
+		<!--Sitemap representation of Latest Movies page-->
+		<g id="latestMoviesPage">
+            <line x1="320" y1="420" x2="320" y2="490"></line>
+            <line x1="320" y1="490" x2="330" y2="490"></line>
+            <rect x="330" y="465" width="150" rx="25" ry="25" height="50" />
+            <text x="405" y="495">Latest Movies</text>
+        </g>
+
+		<!--Sitemap representation of Shop page-->
+        <g id="shopPage">
+            <line x1="560" y1="220" x2="560" y2="250"></line>
+            <rect x="490" y="250" width="150" rx="25" ry="25" height="50" />
+            <text x="565" y="280">Shop</text>
+        </g>
+		
+		<!--Sitemap representation of Contact us page-->
+        <g id="contactUsPage">
+            <line x1="755" y1="220" x2="755" y2="250"></line>
+            <rect x="685" y="250" width="150" rx="25" ry="25" height="50" />
+            <text x="760" y="280">Contact us</text>
+        </g>
+		
+		<!--Sitemap representation of About us page-->
+        <g id="aboutUsPage">
+            <line x1="955" y1="220" x2="955" y2="250"></line>
+            <rect x="880" y="250" width="150" rx="25" ry="25" height="50" />
+            <text x="955" y="280">About us</text>
+        </g>
+		
+		<!--Sitemap representation of Sitemap page-->
+        <g id="sitemap">
+            <line x1="1150" y1="220" x2="1150" y2="250"></line>
+            <rect x="1075" y="250" width="150" rx="25" ry="25" height="50" />
+            <text x="1150" y="280">Sitemap</text>
+        </g>
+    </svg>
+	
+	<!--Javascript functions to link to relavent pages-->
+	<script>
+		document.getElementById("homePage").addEventListener("click", function() {
+			document.location.href="https://w1833519.users.ecs.westminster.ac.uk/mainPage.html";
+		});
+		
+		document.getElementById("quizPage").addEventListener("click", function() {
+			document.location.href="https://w1833518.users.ecs.westminster.ac.uk/index1.html";
+		});
+		
+		document.getElementById("latestReleasesPage").addEventListener("click", function() {
+			document.location.href="https://w1830254.users.ecs.westminster.ac.uk/latestReleases.html";
+		});
+		
+		document.getElementById("latestBooksPage").addEventListener("click", function() {
+			document.location.href="https://w1830254.users.ecs.westminster.ac.uk/latestBooks.html";
+		});
+		
+		document.getElementById("trendingGamesPage").addEventListener("click", function() {
+			document.location.href="https://w1830254.users.ecs.westminster.ac.uk/latestGames.html";
+		});
+		
+		document.getElementById("latestMoviesPage").addEventListener("click", function() {
+			document.location.href="https://w1830254.users.ecs.westminster.ac.uk/latestMovies.html";
+		});
+		
+		document.getElementById("shopPage").addEventListener("click", function() {
+			document.location.href="https://w1833588.users.ecs.westminster.ac.uk/buyproducts.html";
+		});
+		
+		document.getElementById("contactUsPage").addEventListener("click", function() {
+			document.location.href="https://w1833519.users.ecs.westminster.ac.uk/queryForm.html";
+		});
+		
+		document.getElementById("aboutUsPage").addEventListener("click", function() {
+			document.location.href="https://w1833518.users.ecs.westminster.ac.uk/about.html";
+		});
+			
+		document.getElementById("sitemap").addEventListener("click", function() {
+			document.location.href="https://w1830254.users.ecs.westminster.ac.uk/sitemapSVG.html";
+		});
+	</script>
+
+</body>
+
+</html>
